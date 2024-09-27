@@ -8,18 +8,15 @@ License:    BSD-3-Clause AND GFDL-1.3-no-invariants-only AND GPL-3.0-only WITH Q
 URL:        http://qt-project.org/
 Source0: %{name}-%{version}.tar.bz2
 
-BuildRequires:  qt6-rpm-macros
 BuildRequires:  cmake
-BuildRequires:  gcc-c++
-BuildRequires:  ninja-build
-BuildRequires:  cmake(Qt6BuildInternals) = %{version}
-BuildRequires:  cmake(Qt6Core) = %{version}
-BuildRequires:  qt6-qtbase-private-devel = %{version}
-BuildRequires:  cmake(Qt6Network) = %{version}
-BuildRequires:  cmake(Qt6Concurrent) = %{version}
-BuildRequires:  cmake(Qt6WebSockets) = %{version}
-BuildRequires:  cmake(Qt6Gui) = %{version}
+BuildRequires:  clang
+BuildRequires:  ninja
 BuildRequires:  libxkbcommon-devel
+BuildRequires:  qt6-qtwebsockets-devel >= %{qt_version}
+BuildRequires:  qt6-qtbase-devel >= %{qt_version}
+BuildRequires:  qt6-qtbase-private-devel
+%{?_qt6:Requires: %{_qt6}%{?_isa} = %{_qt6_version}}
+BuildRequires:  qt6-qtdeclarative-devel >= %{qt_version}
 
 %description
 %{summary}.
