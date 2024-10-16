@@ -1,7 +1,7 @@
 %global  qt_version 6.7.2
 
 Name:       qt6-qthttpserver
-Version:    6.7.2
+Version: 6.7.2
 Release:    0%{?dist}
 Summary:    Library to facilitate the creation of an http server with Qt
 License:    BSD-3-Clause AND GFDL-1.3-no-invariants-only AND GPL-3.0-only WITH Qt-GPL-exception-1.0
